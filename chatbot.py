@@ -361,7 +361,9 @@ early_stopping_stop = 1000
 checkpoint = "chatbot_weights.ckpt" # For Windows users, replace this line of code by: checkpoint = "./chatbot_weights.ckpt"
 session.run(tf.global_variables_initializer())
 for epoch in range(1, epochs + 1):
+    print('for epoch')
     for batch_index, (padded_questions_in_batch, padded_answers_in_batch) in enumerate(split_into_batches(training_questions, training_answers, batch_size)):
+        print('for batch index')
         starting_time = time.time()
         _, batch_training_loss_error = session.run([optimizer_gradient_clipping, loss_error], {inputs: padded_questions_in_batch,
                                                                                                targets: padded_answers_in_batch,
