@@ -336,6 +336,7 @@ def apply_padding(batch_of_sequences, word2int):
  
 # Splitting the data into batches of questions and answers
 def split_into_batches(questions, answers, batch_size):
+    print('split into batches')
     for batch_index in range(0, len(questions) // batch_size):
         start_index = batch_index * batch_size
         questions_in_batch = questions[start_index : start_index + batch_size]
@@ -363,7 +364,7 @@ session.run(tf.global_variables_initializer())
 for epoch in range(1, epochs + 1):
     print('for epoch')
     
-    print('enumerate(split_into_batches(training_questions, training_answers, batch_size)): '+str(enumerate(split_into_batches(training_questions, training_answers, batch_size))))
+    #print('enumerate(split_into_batches(training_questions, training_answers, batch_size)): '+str(enumerate(split_into_batches(training_questions, training_answers, batch_size))))
     
     for batch_index, (padded_questions_in_batch, padded_answers_in_batch) in enumerate(split_into_batches(training_questions, training_answers, batch_size)):
         print('for batch index')
