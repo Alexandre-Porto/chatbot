@@ -362,6 +362,9 @@ checkpoint = "chatbot_weights.ckpt" # For Windows users, replace this line of co
 session.run(tf.global_variables_initializer())
 for epoch in range(1, epochs + 1):
     print('for epoch')
+    
+    print('enumerate(split_into_batches(training_questions, training_answers, batch_size)): '+str(enumerate(split_into_batches(training_questions, training_answers, batch_size))))
+    
     for batch_index, (padded_questions_in_batch, padded_answers_in_batch) in enumerate(split_into_batches(training_questions, training_answers, batch_size)):
         print('for batch index')
         starting_time = time.time()
