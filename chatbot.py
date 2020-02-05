@@ -152,7 +152,7 @@ for length in range(1,25 + 1):
             
 # test
 print('len questions: '+str(len(questions)))
-raise ValueError('interrupt')
+
             
 ### PART 2: SEQ2SEQ MODEL
             
@@ -353,12 +353,19 @@ def split_into_batches(questions, answers, batch_size):
         print('before yield')
         yield padded_questions_in_batch, padded_answers_in_batch
  
+# test
+print('len sorted_clean_questions: '+str(len(sorted_clean_questions)))
+
 # Splitting the questions and answers into training and validation sets
 training_validation_split = int(len(sorted_clean_questions) * 0.15)
 training_questions = sorted_clean_questions[training_validation_split:]
 training_answers = sorted_clean_answers[training_validation_split:]
 validation_questions = sorted_clean_questions[:training_validation_split]
 validation_answers = sorted_clean_answers[:training_validation_split]
+
+#test
+print('len training questions: '+str(len(training questions)))
+raise ValueError('interrupt')
  
 # Training
 batch_index_check_training_loss = 100
