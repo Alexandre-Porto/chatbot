@@ -153,6 +153,8 @@ for length in range(1,25 + 1):
 # test
 print('len questions: '+str(len(questions)))
 
+print('len clean_questions: '+str(clean_questions))
+
             
 ### PART 2: SEQ2SEQ MODEL
             
