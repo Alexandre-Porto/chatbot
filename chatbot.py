@@ -155,9 +155,9 @@ print('len questions: '+str(len(questions)))
 
 print('len clean_questions: '+str(len(clean_questions)))
 
-print('len questionswords2int'+str(len(questionswords2int)))
+print('len questionswords2int: '+str(len(questionswords2int)))
 
-print('len questions_into_int'+str(len(questions_into_int)))
+print('len questions_into_int: '+str(len(questions_into_int)))
 
 print('len sorted clean questions: '+str(len(sorted_clean_questions)))
 
