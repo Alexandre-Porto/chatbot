@@ -364,7 +364,7 @@ validation_questions = sorted_clean_questions[:training_validation_split]
 validation_answers = sorted_clean_answers[:training_validation_split]
 
 #test
-print('len training questions: '+str(len(training questions)))
+print('len training questions: '+str(len(training_questions)))
 raise ValueError('interrupt')
  
 # Training
