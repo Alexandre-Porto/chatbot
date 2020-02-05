@@ -343,6 +343,7 @@ def split_into_batches(questions, answers, batch_size):
         answers_in_batch = answers[start_index : start_index + batch_size]
         padded_questions_in_batch = np.array(apply_padding(questions_in_batch, questionswords2int))
         padded_answers_in_batch = np.array(apply_padding(answers_in_batch, answerswords2int))
+        print('before yield')
         yield padded_questions_in_batch, padded_answers_in_batch
  
 # Splitting the questions and answers into training and validation sets
