@@ -337,7 +337,7 @@ def apply_padding(batch_of_sequences, word2int):
 # Splitting the data into batches of questions and answers
 def split_into_batches(questions, answers, batch_size):
     print('split into batches')
-    print('range value: '+str(0, len(questions) // batch_size))
+    print('range value: '+str((0, len(questions) // batch_size)))
     for batch_index in range(0, len(questions) // batch_size):
         print('for batch index')
         start_index = batch_index * batch_size
