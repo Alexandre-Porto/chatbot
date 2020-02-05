@@ -374,8 +374,17 @@ for epoch in range(1, epochs + 1):
         print('padded_answers_in_batch'+str(padded_answers_in_batch))
     raise ValueError('interrupt')
     '''
+    '''
+    def function():
+        for i in range(10):
+            yield i, i+1
+            
+    for a, b in function():
+        print('a'+str(a))
+        print('b'+str(b))
+    '''
     # continue
-    for (batch_index, (padded_questions_in_batch, padded_answers_in_batch)) in enumerate(split_into_batches(training_questions, training_answers, batch_size)):
+    for batch_index, (padded_questions_in_batch, padded_answers_in_batch) in enumerate(split_into_batches(training_questions, training_answers, batch_size)):
         print('for batch index')
         starting_time = time.time()
         _, batch_training_loss_error = session.run([optimizer_gradient_clipping, loss_error], {inputs: padded_questions_in_batch,
@@ -387,7 +396,7 @@ for epoch in range(1, epochs + 1):
         ending_time = time.time()
         batch_time = ending_time - starting_time
         
-
+        print('batch index')
         if batch_index % batch_index_check_training_loss == 0:
             print('Epoch: {:>3}/{}, Batch: {:>4}/{}, Training Loss Error: {:>6.3f}, Training Time on 100 Batches: {:d} seconds'.format(epoch,
                                                                                                                                        epochs,
