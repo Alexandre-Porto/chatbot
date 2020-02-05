@@ -150,6 +150,10 @@ for length in range(1,25 + 1):
             sorted_clean_questions.append(questions_into_int[i[0]])
             sorted_clean_answers.append(answers_into_int[i[0]])
             
+# test
+print('len questions: '+str(len(questions)))
+raise ValueError('interrupt')
+            
 ### PART 2: SEQ2SEQ MODEL
             
 # Creating placeholders for the inputs and the targets
