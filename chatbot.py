@@ -141,10 +141,10 @@ for answer in clean_answers:
         else:
             ints.append(answerswords2int[word])
 
-# Sorting questions and answers by the length of the questions
+# Sorting questions and answers by the length of questions
 sorted_clean_questions = []
 sorted_clean_answers = []
-for length in range(1,25 + 1):
+for length in range(1, 25 + 1):
     for i in enumerate(questions_into_int):
         if len(i[1]) == length:
             sorted_clean_questions.append(questions_into_int[i[0]])
@@ -155,7 +155,13 @@ print('len questions: '+str(len(questions)))
 
 print('len clean_questions: '+str(len(clean_questions)))
 
+print('len questionswords2int'+str(len(questionswords2int)))
+
+print('len questions_into_int'+str(len(questions_into_int)))
+
 print('len sorted clean questions: '+str(len(sorted_clean_questions)))
+
+
 
             
 ### PART 2: SEQ2SEQ MODEL
