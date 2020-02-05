@@ -351,9 +351,7 @@ def apply_padding(batch_of_sequences, word2int):
  
 # Splitting the data into batches of questions and answers
 def split_into_batches(questions, answers, batch_size):
-    print('split into batches')
-    print('range value: '+str((0, len(questions) // batch_size)))
-    print('len questions: '+str(len(questions)))
+
     for batch_index in range(0, len(questions) // batch_size):
         print('for batch index')
         start_index = batch_index * batch_size
@@ -410,8 +408,7 @@ for epoch in range(1, epochs + 1):
     '''
     # continue
     for batch_index, (padded_questions_in_batch, padded_answers_in_batch) in enumerate(split_into_batches(training_questions, training_answers, batch_size)):
-        print('for batch index')
-        print('batch index')
+
         starting_time = time.time()
         _, batch_training_loss_error = session.run([optimizer_gradient_clipping, loss_error], {inputs: padded_questions_in_batch,
                                                                                                targets: padded_answers_in_batch,
