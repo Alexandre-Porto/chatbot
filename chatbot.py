@@ -368,7 +368,8 @@ for epoch in range(1, epochs + 1):
     
     #print('enumerate(split_into_batches(training_questions, training_answers, batch_size)): '+str(enumerate(split_into_batches(training_questions, training_answers, batch_size))))
     
-    for padded_questions_in_batch, padded_answers_in_batch in split_into_batches(training_questions, training_answers, batch_size):
+    for batch_index in range(len(training_questions)):
+        padded_questions_in_batch, padded_answers_in_batch = split_into_batches(training_questions[batch_index], training_answers[batch_index], batch_size)
         print('padded_questions_in_batch'+str(padded_questions_in_batch))
         print('padded_answers_in_batch'+str(padded_answers_in_batch))
     raise ValueError('interrupt')
