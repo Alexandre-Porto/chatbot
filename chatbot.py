@@ -376,7 +376,6 @@ validation_answers = sorted_clean_answers[:training_validation_split]
 
 #test
 print('len training questions: '+str(len(training_questions)))
-raise ValueError('interrupt')
  
 # Training
 batch_index_check_training_loss = 100
