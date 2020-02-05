@@ -130,7 +130,7 @@ for question in clean_questions:
             ints.append(questionswords2int['<OUT>'])
         else:
             ints.append(questionswords2int[word])
-            
+    questions_into_int.append(ints)    
 answers_into_int = []
 
 for answer in clean_answers:
@@ -140,6 +140,7 @@ for answer in clean_answers:
             ints.append(answerswords2int['<OUT>'])
         else:
             ints.append(answerswords2int[word])
+    answers_into_int.append(ints) 
 
 # Sorting questions and answers by the length of questions
 sorted_clean_questions = []
