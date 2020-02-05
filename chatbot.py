@@ -371,7 +371,7 @@ for epoch in range(1, epochs + 1):
     for padded_questions_in_batch, padded_answers_in_batch in split_into_batches(training_questions, training_answers, batch_size):
         print('padded_questions_in_batch'+str(padded_questions_in_batch))
         print('padded_answers_in_batch'+str(padded_answers_in_batch))
-        raise ValueError('interrupt')
+    raise ValueError('interrupt')
     
     # continue
     for batch_index, (padded_questions_in_batch, padded_answers_in_batch) in enumerate(split_into_batches(training_questions, training_answers, batch_size)):
