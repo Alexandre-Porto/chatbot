@@ -5,7 +5,6 @@ Created on Sat Feb  1 02:39:49 2020
 @author: Administrador
 """
 
-
 import numpy as np
 import tensorflow as tf
 import re
