@@ -14,3 +14,6 @@ cachetools==3.0.0
 # Internal requirements
 gunicorn==19.9.0
 tqdm==4.30.0
+
+tensorflow==1.12.2
+tensorboard==1.12.2
