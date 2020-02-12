@@ -63,7 +63,7 @@ USE_CUDNN = bool(os.environ.get('CUDA_VISIBLE_DEVICES'))  # True by default for 
 # speed up) and False on CPU-only machines since they does not support CuDNN
 
 # training params
-EPOCHS_NUM = 2  # Total epochs num
+EPOCHS_NUM = 50  # Total epochs num
 BATCH_SIZE = 196  # Number of samples to be used for gradient estimation on each train step. In case of using multiple
 # GPUs for train, each worker will have this number of samples on each step.
 SHUFFLE_TRAINING_BATCHES = True  # Shuffle training batches in the dataset each epoch
