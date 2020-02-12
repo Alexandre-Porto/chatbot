@@ -23,6 +23,7 @@ from cakechat.utils.logger import WithLogger
 from cakechat.utils.text_processing import SPECIAL_TOKENS
 from cakechat.utils.w2v.utils import get_token_vector
 
+print('EPOCHS_NUM'+str(EPOCHS_NUM))
 
 class CakeChatModel(AbstractKerasModel, WithLogger):
     def __init__(self,
