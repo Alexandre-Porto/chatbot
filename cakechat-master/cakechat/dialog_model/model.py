@@ -25,6 +25,8 @@ from cakechat.utils.w2v.utils import get_token_vector
 
 print('EPOCHS_NUM'+str(EPOCHS_NUM))
 
+raise ValueError('print')
+
 class CakeChatModel(AbstractKerasModel, WithLogger):
     def __init__(self,
                  index_to_token,
