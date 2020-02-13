@@ -23,11 +23,13 @@ from cakechat.utils.logger import WithLogger
 from cakechat.utils.text_processing import SPECIAL_TOKENS
 from cakechat.utils.w2v.utils import get_token_vector
 
-print('EPOCHS_NUM'+str(EPOCHS_NUM))
 
-raise ValueError('print')
+
+
 
 class CakeChatModel(AbstractKerasModel, WithLogger):
+    print('EPOCHS_NUM'+str(EPOCHS_NUM))
+    raise ValueError('print at class')
     def __init__(self,
                  index_to_token,
                  index_to_condition,
@@ -57,6 +59,9 @@ class CakeChatModel(AbstractKerasModel, WithLogger):
                  horovod=None,
                  tensorboard_log_dir=TENSORBOARD_LOG_DIR,
                  log_run_metadata=LOG_RUN_METADATA):
+        
+        print('EPOCHS_NUM'+str(EPOCHS_NUM))
+        raise ValueError('print at cakechat model init')
         """
         :param index_to_token: Dict with mapping: tokens indices to tokens
         :param index_to_condition: Dict with mapping: conditions indicies to conditions values
